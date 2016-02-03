@@ -3,6 +3,8 @@
 This application showcases the new component router that is available
 for Angular 1.5
 
-## Running the App
+## notice that the angular route file is differnet from latest npm
 
-**Install the dependencies**
+## Running the App
+	npm install
+	npm start
