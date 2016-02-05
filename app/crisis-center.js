@@ -7,7 +7,8 @@ angular.module('crisis-center', [])
     template: '<h2>Crisis Center</h2><ng-outlet></ng-outlet>',
     $routeConfig: [
       {path:'/',    name: 'CrisisList',   component: 'crisisList', useAsDefault: true},
-      {path:'/:id', name: 'CrisisDetail', component: 'crisisDetail'}
+      {path:'/:id', name: 'CrisisDetail', component: 'crisisDetail'},
+      {path:'/crisisPractice', name: 'CrisisPractice', component: 'crisisPractice'}
     ]
   })
 
@@ -27,6 +28,11 @@ angular.module('crisis-center', [])
     $canActivate: function($nextInstruction, $prevInstruction) {
       console.log('$canActivate', arguments);
     }
+  })
+
+  .component('crisisPractice', {
+    templateUrl: 'crisisPractice.html',
+    controller: CrisisPracticeComponent
   })
 
   .component('crisisDetail', {
@@ -66,6 +72,12 @@ function CrisisService($q) {
     });
   };
 }
+
+
+function CrisisPracticeComponent() {
+  console.log('in');
+}
+
 
 function CrisisListComponent(crisisService) {
   var _selectedId = null;

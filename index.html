@@ -6,6 +6,18 @@
     <title>demo</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    
+  </head>
+  <body ng-app="app">
+    <div class="container-fluid">
+      <h1 class="title">Component Router</h1>
+      <div class="row">
+        <ng-outlet></ng-outlet>    
+      </div>  
+    </div>
+    
+
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
@@ -15,12 +27,6 @@
     <script src="./app/dialogue.js"></script>
     <script src="./app/crisis-center.js"></script>
     <script src="./app/heroes.js"></script>
-  </head>
-  <body ng-app="app">
-    <div class="container">
-      <h1 class="title">Component Router</h1>
-      <ng-outlet></ng-outlet>      
-    </div>
-    
+    <script src="./app/random.js"></script>
   </body>
 </html>
