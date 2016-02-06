@@ -20,14 +20,7 @@
 		.component('app', {
 
 		  templateUrl: 'app/mainApp.html',
-		    // '<nav class="navbar navbar-default">\n' +
-			   //  '<ul class="nav navbar-nav"> ' +
-			   //  ' <li> <a ng-link="[\'CrisisCenter\']">Crisis Center</a> </li>\n' +
-			   //  '  <li> <a ng-link="[\'Heroes\']">Heroes</a> </li>\n' +
-			   //  '  <li> <a ng-link="[\'Random\']">Random</a> </li>\n' +
-			   //  '</ul>' +
-		    // '</nav>\n' +
-		    // '<ng-outlet></ng-outlet>\n',
+		    
 		  $routeConfig: [
 		    {path: '/crisis-center/...', name: 'CrisisCenter', component: 'crisisCenter', useAsDefault: true},
 		    {path: '/heroes/...', name: 'Heroes', component: 'heroes'},
