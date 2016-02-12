@@ -4,7 +4,7 @@ angular.module('crisis-center', [])
   .service('crisisService', CrisisService)
 
   .component('crisisCenter', {
-    template: '<h2>Crisis Center</h2><ng-outlet></ng-outlet>',
+    templateUrl: '/app/crisisCenter.html',
     $routeConfig: [
       {path:'/',    name: 'CrisisList',   component: 'crisisList', useAsDefault: true},
       {path:'/:id', name: 'CrisisDetail', component: 'crisisDetail'},
@@ -13,17 +13,17 @@ angular.module('crisis-center', [])
   })
 
   .component('crisisList', {
-    template:
-      '<ul>\n' +
-      '  <li ng-repeat="crisis in $ctrl.crises"\n' +
-      '    ng-class="{ selected: $ctrl.isSelected(crisis) }"\n' +
-      '    ng-click="$ctrl.onSelect(crisis)">\n' +
-      // '    >' +
-      // '  <a ng-link="[\'CrisisDetail\', { id: crisis.id }]">\n' +
-      '    <span class="badge">{{crisis.id}}</span> {{crisis.name}}\n' +
-      // '  </a>' +
-      '  </li>\n' +
-      '</ul>\n',
+    templateUrl:'/app/crisisList.html',
+      // '<ul>\n' +
+      // '  <li ng-repeat="crisis in $ctrl.crises"\n' +
+      // '    ng-class="{ selected: $ctrl.isSelected(crisis) }"\n' +
+      // '    ng-click="$ctrl.onSelect(crisis)">\n' +
+      // // '    >' +
+      // // '  <a ng-link="[\'CrisisDetail\', { id: crisis.id }]">\n' +
+      // '    <span class="badge">{{crisis.id}}</span> {{crisis.name}}\n' +
+      // // '  </a>' +
+      // '  </li>\n' +
+      // '</ul>\n',
     controller: CrisisListComponent,
     $canActivate: function($nextInstruction, $prevInstruction) {
       console.log('$canActivate', arguments);
@@ -36,18 +36,18 @@ angular.module('crisis-center', [])
   })
 
   .component('crisisDetail', {
-    template:
-      '<div ng-if="$ctrl.crisis">\n' +
-      '  <h3>"{{$ctrl.editName}}"</h3>\n' +
-      '  <div>\n' +
-      '    <label>Id: </label>{{$ctrl.crisis.id}}</div>\n' +
-      '  <div>\n' +
-      '    <label>Name: </label>\n' +
-      '    <input ng-model="$ctrl.editName" placeholder="name"/>\n' +
-      '  </div>\n' +
-      '  <button ng-click="$ctrl.save()">Save</button>\n' +
-      '  <button ng-click="$ctrl.cancel()">Cancel</button>\n' +
-      '</div>\n',
+    templateUrl:'/app/crisisDetail.html',
+      // '<div ng-if="$ctrl.crisis">\n' +
+      // '  <h3>"{{$ctrl.editName}}"</h3>\n' +
+      // '  <div>\n' +
+      // '    <label>Id: </label>{{$ctrl.crisis.id}}</div>\n' +
+      // '  <div>\n' +
+      // '    <label>Name: </label>\n' +
+      // '    <input ng-model="$ctrl.editName" placeholder="name"/>\n' +
+      // '  </div>\n' +
+      // '  <button ng-click="$ctrl.save()">Save</button>\n' +
+      // '  <button ng-click="$ctrl.cancel()">Cancel</button>\n' +
+      // '</div>\n',
     controller: CrisisDetailComponent
   });
 
