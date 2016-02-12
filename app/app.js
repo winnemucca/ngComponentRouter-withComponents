@@ -23,6 +23,8 @@
 		    
 		  $routeConfig: [
 		    {path: '/crisis-center/...', name: 'CrisisCenter', component: 'crisisCenter', useAsDefault: true},
+		    // {path: '/crisis-center/...', name: 'CrisisCenter', components:{main: 'crisisCenter', secondary: 'randomInfo' }, useAsDefault: true },
+
 		    {path: '/heroes/...', name: 'Heroes', component: 'heroes'},
 		    {path: '/disaster', name: 'Asteroid', redirectTo: ['CrisisCenter', 'CrisisDetail', {id:3}]},
 		    {path: '/random', name: 'Random', component: 'randomInfo'}

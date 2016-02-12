@@ -25,8 +25,19 @@
         </div><!--/.sidebar-offcanvas-->
 
     <div class="col-xs-6 col-sm-9 col-md-9">
-   		<ng-outlet></ng-outlet>
+   		<ng-outlet ="main"></ng-outlet>
     </div>
- </div><!--/row-->
 
-<!-- <ng-outlet></ng-outlet> -->
+    <div class="col xs-6 col-sm -9">
+    	<h1> Another View</h1>
+    		<ng-outlet="secondary"> </ng-outlet>
+    </div>
+
+
+ </div><!--/row-->
+ <div class="row">
+ 	<div class="col xs-6 col-sm -9">
+    	<h1> Lets get hot</h1>
+    		<ng-outlet="secondary"> </ng-outlet>
+    </div>
+ </div>
